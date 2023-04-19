@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>freeCodeCamp Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label">Name <input id="name" type"text" placeholder="Enter you name" required />
+        </label>
+        <label id="email-label">Email <input id="email" type="email" placeholder="Enter you e-mail" required />
+        </label>
+        <label id="number-label">Age <input min="10" max="120" id="number" type="number" placeholder="Enter you age" required />
+        </label>
+        <label>
+          <select id="dropdown">
+            <option value="1">Student</option>
+            <option value="2">Other</option>
+          </select>
+        </label>
+        <label><input type="radio" value="1" name="recommend" /> Projects</label>
+        <label><input type="radio" value="2" name="recommend" /> Community</label>
+        <label>
+          <input value="1" id="Front-end Projects" type="checkbox" />Front-end Projects
+          <input value="2" id="Back-end Projects" type="checkbox" />Back-end Projects
+          <input value="3" id="Data Visualization" type="checkbox" />Data Visualization
+          <input value="4" id="Challenges" type="checkbox" />Challenges
+          <input value="5" id="Open Source Community" type="checkbox" />Open Source Community
+          <input value="6" id="Open Source Community" type="checkbox" />Open Source Community
+          <input value="7" id="Videos" type="checkbox" />Videos
+          <input value="8" id="City Meetups" type="checkbox" />City Meetups
+          <input value="9" id="Wiki" type="checkbox" />Wiki
+          <input value="10" id="Forum" type="checkbox" />Forum
+          <input value="11" id="Additional Courses" type="checkbox" />Additional Courses
+        </label>
+        <label>Any comments or suggestions?
+          <textarea rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
+        </label>
+        <input  id="submit" type="submit" />
+      </fieldset>
+    </form>  
+  </body>
+</html>
