@@ -10,6 +10,7 @@ const ProjectsSection = () => {
                 <a
                     href="https://codepen.io/freeCodeCamp/full/zNqgVx"
                     target="_blank"
+                    rel="noreferrer"
                     class="project project-tile"
                 >
                 <img
@@ -26,6 +27,7 @@ const ProjectsSection = () => {
                 <a
                     href="https://codepen.io/freeCodeCamp/full/qRZeGZ"
                     target="_blank"
+                    rel="noreferrer"
                     class="project project-tile"
                 >
                 <img
@@ -42,6 +44,7 @@ const ProjectsSection = () => {
                 <a
                     href="https://codepen.io/freeCodeCamp/full/wgGVVX"
                     target="_blank"
+                    rel="noreferrer"
                     class="project project-tile"
                 >
                 <img
@@ -58,6 +61,7 @@ const ProjectsSection = () => {
                 <a
                     href="https://codepen.io/freeCodeCamp/full/mVEJag"
                     target="_blank"
+                    rel="noreferrer"
                     class="project project-tile"
                 >
                 <img
@@ -74,6 +78,7 @@ const ProjectsSection = () => {
                 <a
                     href="https://codepen.io/freeCodeCamp/full/wGqEga"
                     target="_blank"
+                    rel="noreferrer"
                     class="project project-tile"
                 >
                 <img
@@ -90,6 +95,7 @@ const ProjectsSection = () => {
                 <a
                     href="https://codepen.io/freeCodeCamp/full/KzXQgy"
                     target="_blank"
+                    rel="noreferrer"
                     class="project project-tile"
                 >
                 <img
@@ -109,6 +115,7 @@ const ProjectsSection = () => {
                 href="https://codepen.io/FreeCodeCamp/"
                 class="btn btn-show-all"
                 target="_blank"
+                rel="noreferrer"
                 >Show all<i class="fas fa-chevron-right"></i
             ></a>
         </section>
