@@ -11,6 +11,7 @@ const ContactSection = () => {
                 <a
                     href="https://facebook.com/freecodecamp"
                     target="_blank"
+                    rel = "noreferrer"
                     class="btn contact-details"
                 ><i class="fab fa-facebook-square"></i> Facebook</a
                 >
@@ -18,12 +19,14 @@ const ContactSection = () => {
                     id="profile-link"
                     href="https://github.com/freecodecamp"
                     target="_blank"
+                    rel = "noreferrer"
                     class="btn contact-details"
                 ><i class="fab fa-github"></i> GitHub</a
                 >
                 <a
                     href="https://twitter.com/freecodecamp"
                     target="_blank"
+                    rel = "noreferrer"
                     class="btn contact-details"
                 ><i class="fab fa-twitter"></i> Twitter</a
                 >

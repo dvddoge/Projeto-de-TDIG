@@ -9,7 +9,7 @@ const Footer = () => {
           </p>
           <p>
             &copy; Created for
-            <a href="https://www.freecodecamp.com/" target="_blank">
+            <a href="https://www.freecodecamp.com/" target="_blank" rel = "noreferrer">
               freeCodeCamp <i className="fab fa-free-code-camp"></i>
             </a>
           </p>
