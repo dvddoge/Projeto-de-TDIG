@@ -1,41 +1,25 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useState } from 'react';
 
-export default function RegistrationForm() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
-  
-  const isTeacher = watch('role') === 'teacher'; // observe the role field to dynamically change the form
+const RegistrationForm = () => {
+  const [user, setUser] = useState({name: '', email: '', password: ''});
+
+  const handleChange = e => {
+    setUser({...user, [e.target.name]: e.target.value});
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    // Aqui você chamaria uma ação para registrar o usuário
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register('name', { required: true })} placeholder="Name" />
-      {errors.name && <p>This field is required</p>}
-
-      <input {...register('email', { required: true })} placeholder="Email" />
-      {errors.email && <p>This field is required</p>}
-
-      <input type="password" {...register('password', { required: true })} placeholder="Password" />
-      {errors.password && <p>This field is required</p>}
-      
-      <select {...register('role', { required: true })}>
-        <option value="">Select role</option>
-        <option value="student">Student</option>
-        <option value="teacher">Teacher</option>
-      </select>
-      {errors.role && <p>This field is required</p>}
-
-      {isTeacher && (
-        <>
-          <input {...register('field', { required: true })} placeholder="Field of Study" />
-          {errors.field && <p>This field is required</p>}
-
-          <input {...register('degree', { required: true })} placeholder="Degree" />
-          {errors.degree && <p>This field is required</p>}
-        </>
-      )}
-
-      <input type="submit" />
+    <form onSubmit={handleSubmit}>
+      <input name="name" onChange={handleChange} value={user.name} placeholder="Nome"/>
+      <input name="email" type="email" onChange={handleChange} value={user.email} placeholder="Email"/>
+      <input name="password" type="password" onChange={handleChange} value={user.password} placeholder="Senha"/>
+      <button type="submit">Registrar</button>
     </form>
   );
-}
+};
+
+export default RegistrationForm;

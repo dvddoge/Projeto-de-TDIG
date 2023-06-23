@@ -1,27 +1,38 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from './components/Login';
-import PrivateRoute from './components/PrivateRoute';
-import AuthenticatedAxios from './components/AuthenticatedAxios';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-const Logout = () => {
-  localStorage.removeItem('jwtToken');
-  return <Redirect to="/login" />;
-}
+import Header from './components/Header';
+import Footer from './components/Footer';
+import LoginPage from './components/LoginPage';
+import ProjectsPage from './components/ProjectsPage';
+import ProjectDetailsPage from './components/ProjectDetailsPage';
+import RegistrationForm from './components/RegistrationForm';
+import StudentLinking from './components/StudentLinking';
 
-function App() {
+import UserContextProvider from './context/UserContext';
+import ProjectContextProvider from './context/ProjectContext';
+
+const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/login" component={LoginForm} />
-        <Route path="/logout" component={Logout} />
-        <PrivateRoute path="/profile" component={UserProfile} /> {/* substitua pelo componente de perfil de usuário */}
-        <PrivateRoute path="/home" component={UserHome} /> {/* substitua pelo componente da página inicial do usuário */}
-        <PrivateRoute path="/project-management" component={ProjectManagement} /> {/* substitua pelo componente de gerenciamento de projetos */}
-        <Route path="*" component={() => "404 Not Found"} />
-      </Switch>
-    </Router>
+    <UserContextProvider>
+      <ProjectContextProvider>
+        <Router>
+          <div className="App">
+            <Header />
+            <Switch>
+              <Route path="/register" component={RegistrationForm} />
+              <Route path="/login" component={LoginPage} />
+              <Route path="/projects/:id" component={ProjectDetailsPage} />
+              <Route path="/projects" component={ProjectsPage} />
+              <Route path="/link-student" component={StudentLinking} />
+              <Route path="/" component={LoginPage} />
+            </Switch>
+            <Footer />
+          </div>
+        </Router>
+      </ProjectContextProvider>
+    </UserContextProvider>
   );
-}
+};
 
 export default App;
