@@ -7,9 +7,19 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const token = await loginUser(email, password);
-    localStorage.setItem('jwtToken', token);
-  };
+    try {
+      const token = await loginUser(email, password);
+      if (token) {
+        localStorage.setItem('jwtToken', token);
+      } else {
+        // handle login failure
+        console.error('Falha na autenticação');
+      }
+    } catch (error) {
+      // handle other errors
+      console.error(error);
+    }
+  };  
 
   return (
     <form onSubmit={handleSubmit}>
