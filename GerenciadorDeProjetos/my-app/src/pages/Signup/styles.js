@@ -29,7 +29,7 @@ export const Label = styled.label`
   color: #676767;
 `;
 
-export const LabelSignup = styled.label`
+export const LabelSignin = styled.label`
   font-size: 16px;
   color: #676767;
 `;
@@ -46,4 +46,15 @@ export const Strong = styled.strong`
     text-decoration: none;
     color: #676767;
   }
+`;
+
+export const Select = styled.select`
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #676767;
+  font-size: 16px;
+  margin-bottom: 15px;
 `;
